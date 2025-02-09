@@ -24,14 +24,15 @@ rclone mount "${REMOTE_NAME}:${REMOTE_PATH}" "${MOUNT_PATH}" \
     --attr-timeout 10m \
     --vfs-cache-mode full \
     --vfs-cache-max-age 6h \
-    --vfs-cache-max-size 5G \
-    --vfs-read-chunk-size-limit 100M \
+    --vfs-cache-max-size 10G \
+    --vfs-read-chunk-size-limit 200M \
     --vfs-cache-poll-interval 15m \
-    --buffer-size 100M \
-    --dir-cache-time 1h \
+    --buffer-size 200M \
+    --dir-cache-time 6h \
     --poll-interval 5m \
+    --bwlimit "08:00,5M 12:00,50M" \
     --config /root/.config/rclone/rclone.conf \
     --cache-dir /root/.cache/rclone \
     --log-level INFO \
     --log-file=/var/log/rclone.log \
-    --daemon --allow-other
+    --daemon --allow-other --checksum
