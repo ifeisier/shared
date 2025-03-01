@@ -1,0 +1,24 @@
+bindPort = 7000
+quicBindPort = 7000
+vhostHTTPPort = 80
+vhostHTTPSPort = 443
+
+auth.method = "token"
+auth.token = "12345678"
+
+transport.heartbeatTimeout = 30
+transport.maxPoolCount = 10
+subDomainHost = "example.com"
+
+allowPorts = [ { start = 8000, end = 40000 } ]
+
+webServer.addr = "0.0.0.0"
+webServer.port = 7001
+webServer.user = "admin"
+webServer.password = "admin"
+
+log.to = "./frps.log"
+log.level = "info"
+log.maxDays = 3
+log.disablePrintColor = false
+detailedErrorsToClient = true

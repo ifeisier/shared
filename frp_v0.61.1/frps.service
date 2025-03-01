@@ -1,0 +1,13 @@
+[Unit]
+Description = frp server
+After = network.target syslog.target
+Wants = network.target
+
+[Service]
+Type = simple
+ExecStart = /root/frp_0.61.1/frps -c /root/frp_0.61.1/frps.toml
+
+[Install]
+WantedBy = multi-user.target
+
+# 说明: https://gofrp.org/zh-cn/docs/setup/systemd/
