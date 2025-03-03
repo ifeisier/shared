@@ -6,7 +6,6 @@ auth.method = "token"
 auth.token = "12345678"
 
 transport.protocol = "quic"
-transport.heartbeatTimeout = 30
 transport.poolCount = 10
 
 webServer.addr = "127.0.0.1"

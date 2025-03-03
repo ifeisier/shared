@@ -6,7 +6,6 @@ vhostHTTPSPort = 443
 auth.method = "token"
 auth.token = "12345678"
 
-transport.heartbeatTimeout = 30
 transport.maxPoolCount = 10
 subDomainHost = "example.com"
 
