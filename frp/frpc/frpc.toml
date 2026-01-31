@@ -1,0 +1,38 @@
+user = "your_name"
+serverAddr = ""
+serverPort = 49151
+
+auth.method = "token"
+auth.token = "Gl97&0^nJoin&P5ywJi9Q%r1^JT%XOHj"
+
+webServer.addr = "127.0.0.1"
+webServer.port = 7400
+webServer.user = "admin"
+webServer.password = "admin"
+
+[[proxies]]
+name = "plugin_static_file"
+type = "tcp"
+remotePort = 0
+[proxies.plugin]
+type = "static_file"
+localPath = "/home"
+stripPrefix = "static"
+httpUser = "abc"
+httpPassword = "abc"
+
+
+[[proxies]]
+name = "web01"
+type = "http"
+localIP = "127.0.0.1"
+localPort = 8080
+customDomains = [""]
+requestHeaders.set.x-from-where = "frp"
+
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 0
