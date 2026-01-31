@@ -6,6 +6,7 @@ auth.method = "token"
 auth.token = "Gl97&0^nJoin&P5ywJi9Q%r1^JT%XOHj"
 
 transport.maxPoolCount = 1
+transport.heartbeatTimeout = 30
 
 allowPorts = [ { start = 2000, end = 49000 } ]
 

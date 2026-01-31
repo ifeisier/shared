@@ -5,6 +5,9 @@ serverPort = 49151
 auth.method = "token"
 auth.token = "Gl97&0^nJoin&P5ywJi9Q%r1^JT%XOHj"
 
+transport.heartbeatInterval = 10
+transport.heartbeatTimeout = 30
+
 webServer.addr = "127.0.0.1"
 webServer.port = 7400
 webServer.user = "admin"
